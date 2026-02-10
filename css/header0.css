@@ -1,0 +1,200 @@
+/* Navbar */
+
+.header-object {
+  display: flex;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 84px;
+  background-color: rgba(14, 77, 143, 1.0); /*rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px); /* Blur effect */
+  -webkit-backdrop-filter: blur(5px); /* Safari support */
+  padding: 0 10%;
+  z-index: 100;
+}
+
+.school-logo {
+  height: 64px;
+  margin-right: 10px;
+}
+
+.toggle-button {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  height: 32px;
+  width: 35px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.bar {
+  width: 35px;
+  height: 4px;
+  border-radius: 5px;
+  background-color: white;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+/* Animation for hamburger menu */
+
+.bar::before, .bar::after {
+  content: '';
+  position: absolute;
+  width: 35px;
+  height: 4px;
+  border-radius: 5px;
+  background-color: white;
+  transition: transform 0.3s ease-in-out;
+}
+
+.bar::before {
+  transform: translateY(-12px);
+}
+
+.bar::after {
+  transform: translateY(12px);
+}
+
+.toggle-button.open .bar {
+  background-color: transparent;
+}
+
+.toggle-button.open .bar::before {
+  transform: rotate(45deg);
+}
+
+.toggle-button.open .bar::after {
+  transform: rotate(-45deg);
+}
+
+/* Header buttons */
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+.li-nav {
+  margin-left: 5px;
+}
+
+.li-anchor {
+  font-size: 17px;
+  color: rgba(255, 255, 255, 1); /*rgba(88, 94, 96,1.0);*/
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.li-anchor:hover {
+  background-color: rgb(86, 177, 69);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.last-link {
+  margin: 0;
+  padding: 0;
+}
+
+/* Social Medias */
+
+.social-media-list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  margin-left: 2%;
+}
+
+.social-medias {
+  width: 30px;
+  margin-left: 5px;
+  background-color: transparent;
+  border-radius: 3px;
+}
+
+.social-medias:hover {
+  background-color: rgb(86, 177, 69);
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Mobile Compatibility */
+
+@media screen and (max-width: 1024px) {
+
+  /* Navbar */
+
+  .navbar {
+    padding: 20px;
+  }
+
+  .APSA-logo {
+    height: 45px;
+  }
+
+  .toggle-button {
+    display: flex;
+  }
+
+  .nav-links {
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    background-color: rgb(001,031,091);
+    padding: 10px;
+    top: 84px; /* Starts at bottom of header bar */
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, visibility 0s 0.3s;
+  }
+
+  .li-nav {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .li-anchor:hover {
+    background-color: transparent;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .social-media-list {
+    display: none;
+  }
+
+  .social-medias {
+    margin: 10px 3px 0 3px;
+  }
+
+  .social-medias:hover {
+    background-color: transparent;
+  }
+
+  /* Toggling the active class for clicking the navbar hamburger menu */
+  .nav-links.active {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out, visibility 0s;
+  }
+
+  .nav-links:not(.active) {
+    visibility: hidden; /* Out animation */
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0s 0.3s;
+  }
+}

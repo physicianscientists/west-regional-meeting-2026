@@ -1,0 +1,219 @@
+/* Organizers Section */
+
+.organizers-section {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10%;
+  padding-right: 10%;
+  margin-top: 50px;
+}
+
+.organizers-titles {
+  font-size: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.org-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 20px;
+  margin-bottom: 35px;
+}
+
+.collapsible-profile-tiles {
+  flex: 1;
+  /*background-color: rgba(0, 0, 0, 0.3);*/
+  /*cursor: pointer;*/
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+/*
+.collapsible-profile-tiles:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: background-color 0.2s ease-in-out;
+}
+*/
+
+.profile-pics {
+  width: 100%;
+  border-radius: 10%;
+  margin-bottom: 5px;
+}
+
+.roles {
+  display: flex;
+  flex-direction: column;
+  padding: 4px 8px;
+}
+
+.role-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.program-year {
+  font-weight: normal;
+}
+
+.role-title {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.plus {
+  font-size: 24px;
+  font-weight: 700;
+  margin-right: 6px;
+}
+
+.role-desc {
+  font-size: 16px;
+  color: rgb(80, 80, 80);
+  line-height: 1.2;
+  padding: 0 8px;
+  margin-bottom: 10px;
+}
+
+.organizers-subtitles {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+
+
+/* Animating in the role descriptions when you click on them */
+/*
+.role-desc {
+  font-size: 16px;
+  color: rgb(80, 80, 80);
+  line-height: 1.2;
+  padding: 0 8px;
+  margin-bottom: 10px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.collapsible-profile-tiles.open .role-desc {
+  max-height: 1000px; 
+}
+*/
+
+
+
+
+/* Sponsors and Partners */
+
+.osu-sponsor-title {
+  margin-bottom: 12px;
+}
+
+.osu-sponsor-list {
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
+
+.osu-sponsor-list li {
+  margin-bottom: 3px;
+}
+
+.osu-sponsor-list li a {
+  font-size: 16px;
+  color: rgb(14, 77, 143);
+  line-height: 1.5;
+}
+
+.sponsors-div {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 30px 0;
+}
+
+.links-to-sponsors {
+  text-decoration: none;
+}
+
+.sponsor-logos {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  margin: 5px 25px;
+}
+
+.partners-div {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0 25px 0;
+}
+
+.partner-logos {
+  max-width: 350px;
+  max-height: 250px;
+  margin: 0 30px;
+}
+
+.partner-links {
+  text-decoration: none;
+}
+
+
+
+
+/* Mobile compatibility */
+
+@media screen and (max-width: 2500px) {
+  .org-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 1900px) {
+  .org-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+
+  .organizers-section {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+
+  .org-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-pics {
+    width: 80%;
+  }
+
+  /* Sponsors and partners */
+  .sponsors-div {
+    row-gap: 20px;
+    margin-bottom: 5px;
+  }  
+
+  .sponsor-logos {
+    max-width: 200px;
+  }
+}
+
+@media (min-width: 1930px) {
+  .sponsor-logos {
+    max-width: 300px; /* For larger screens */
+  }
+}
+

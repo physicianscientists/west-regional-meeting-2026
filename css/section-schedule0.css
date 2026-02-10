@@ -1,0 +1,71 @@
+/* Schedule Section */
+
+.schedule-section {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20%;
+  padding-right: 20%;
+  margin-top: 50px;
+}
+
+.schedule-title {
+  font-size: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.schedule-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 60px;
+}
+
+.schedule-container table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.schedule-container th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid rgb(14, 77, 143);
+  word-wrap: break-word;
+}
+
+.schedule-container th {
+  background-color: rgb(14, 77, 143);
+  color: white;
+  font-size: 20px;
+}
+
+.schedule-container ul {
+  margin-left: 20px;
+}
+
+.schedule-container ol {
+  margin-left: 20px;
+}
+
+.schedule-underline {
+  text-decoration: underline;
+  margin-top: 10px;
+}
+
+
+/* Mobile compatibility */
+
+@media screen and (max-width: 1024px) {
+
+  .schedule-section {
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 50px;
+  }
+
+  .schedule-container th, .schedule-container td {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+}
