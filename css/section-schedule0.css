@@ -69,3 +69,78 @@
   }
 
 }
+
+
+/* Expandable row accordion */
+
+.schedule-row-expandable {
+  cursor: pointer;
+}
+
+.schedule-row-expandable:hover td {
+  background-color: rgba(14, 77, 143, 0.08);
+}
+
+.schedule-row-expandable.expanded td {
+  background-color: rgba(14, 77, 143, 0.12);
+}
+
+.schedule-expand-icon {
+  float: right;
+  font-size: 11px;
+  color: rgb(14, 77, 143);
+  transition: transform 0.2s;
+  display: inline-block;
+}
+
+.schedule-row-expandable.expanded .schedule-expand-icon {
+  transform: rotate(180deg);
+}
+
+.schedule-detail-row {
+  display: none;
+}
+
+.schedule-detail-row.open {
+  display: table-row;
+}
+
+.schedule-detail-row td {
+  background-color: rgb(240, 246, 255);
+  border-bottom: 2px solid rgb(14, 77, 143);
+  padding: 16px 12px;
+}
+
+.schedule-detail-content {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.schedule-qr-code {
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+}
+
+.schedule-detail-info p {
+  margin-bottom: 6px;
+}
+
+.schedule-detail-info a {
+  color: rgb(14, 77, 143);
+  font-weight: bold;
+  word-break: break-all;
+}
+
+@media screen and (max-width: 1024px) {
+  .schedule-detail-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .schedule-qr-code {
+    width: 90px;
+    height: 90px;
+  }
+}
